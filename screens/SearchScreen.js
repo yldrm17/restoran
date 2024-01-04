@@ -8,6 +8,8 @@ export default function SearchScreen() {
   const [searchApi, results] = useResults();
   //console.log(results);
 
+  //filterResultsByPrice fonksiyonu bir fiyat kategorisi alacak şekilde parametre olarak price'ı bekler.
+  // filter fonksiyonu, results dizisindeki her bir elemanı kontrol eder. Her elemanın price özelliği, belirtilen price parametresiyle eşleşenler filtrelenir ve yeni bir dizi oluşturulur. Bu yeni dizi, sadece belirtilen fiyat kategorisine sahip restoranları içerir.
   const filterResultsByPrice = (price) => {
     return results.filter((result) => {
       return result.price === price;
